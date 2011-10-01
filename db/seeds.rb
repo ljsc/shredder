@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Question.create(:title => 'How do I create a question?', :body => 'This is a silly question', :catagory => 'miscellaneous')
+
