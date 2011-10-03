@@ -1,29 +1,18 @@
-<h1>Listing questions</h1>
+<div data-role="header" data-position="inline">
+  <h1>Questions</h1>
+  <%= toolbar_right_button 'Add', new_question_path, :iconpos => 'right', :icon => 'plus' %>
+</div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Author</th>
-    <th>Catagory</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div data-role="content">
+  <ul data-role="listview">
+  <% @questions.each do |question| %>
+    <li> 
+      <%= table_view_link question do %>
+        <h2><%= question.title %></h2>
+        <p><%= question.body %></p>
+      <% end %>
+    </li>
+  <% end %>
+  </ul>
+</div>
 
-<% @questions.each do |question| %>
-  <tr>
-    <td><%= question.title %></td>
-    <td><%= question.body %></td>
-    <td><%= question.author_id %></td>
-    <td><%= question.catagory %></td>
-    <td><%= link_to 'Show', question %></td>
-    <td><%= link_to 'Edit', edit_question_path(question) %></td>
-    <td><%= link_to 'Destroy', question, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Question', new_question_path %>

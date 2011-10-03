@@ -1,25 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div data-role="header">
+  <%= toolbar_button 'Back', questions_path, :icon => 'arrow-l', :direction => 'reverse' %>
+  <h1>Question</h1>
+  <%= toolbar_right_button 'Edit', edit_question_path(@question),
+    :iconpos => 'right', :icon => 'gear', :prefetch => 'true' %>
+</div>
 
-<p>
-  <b>Title:</b>
-  <%= @question.title %>
-</p>
+<% if notice %>
+  <div id="notice" class="ui-body ui-body-e"><%= notice %></div>
+<% end %>
 
-<p>
-  <b>Body:</b>
-  <%= @question.body %>
-</p>
+<div data-role="content">
+  <p>
+    <b>Title:</b>
+    <%= @question.title %>
+  </p>
+  
+  <p>
+    <b>Body:</b>
+    <%= @question.body %>
+  </p>
+  
+  <p>
+    <b>Author:</b>
+    <%= @question.author_id %>
+  </p>
+  
+  <p>
+    <b>Catagory:</b>
+    <%= @question.catagory %>
+  </p>
+</div>
 
-<p>
-  <b>Author:</b>
-  <%= @question.author_id %>
-</p>
 
-<p>
-  <b>Catagory:</b>
-  <%= @question.catagory %>
-</p>
-
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
