@@ -18,4 +18,10 @@ protected
   def current_user
     @_current_user ||= session[:current_user]
   end
+
+  def static_url
+    flash[:static_url]
+  end
+
+  helper_method :static_url
 end

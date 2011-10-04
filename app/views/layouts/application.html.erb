@@ -10,7 +10,11 @@
 </head>
 <body>
 
+<% if static_url %>
+<div data-role="page" data-url="<%= static_url %>">
+<% else %>
 <div data-role="page">
+<% end %>
   <%= yield %>
   <div data-role="footer" data-position="fixed">
     <div data-role="navbar">
