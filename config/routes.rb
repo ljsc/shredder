@@ -1,5 +1,12 @@
 Shredder::Application.routes.draw do
+  get "session/create"
+
   resources :questions
+
+  match '/login' => 'session#new', :as => 'login'
+  match '/auth/gwemail/callback' => 'session#create'
+
+  root :to => 'questions#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
