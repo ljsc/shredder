@@ -23,5 +23,10 @@ protected
     flash[:static_url]
   end
 
-  helper_method :static_url
+  def active_tab(tab=nil)
+    @active_tab = tab if tab
+    @active_tab
+  end
+
+  helper_method :static_url, :active_tab
 end

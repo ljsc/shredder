@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
+  <div class="field" data-role="fieldcontain">
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :body %><br />
+  <div class="field" data-role="fieldcontain">
+    <%= f.label :body %>
     <%= f.text_area :body %>
   </div>
-  <div class="field">
-    <%= f.label :catagory %><br />
+  <div class="field" data-role="fieldcontain">
+    <%= f.label :catagory %>
     <%= f.text_field :catagory %>
   </div>
-  <div class="actions">
+  <div class="actions" data-role="fieldcontain">
     <%= f.submit %>
   </div>
 <% end %>

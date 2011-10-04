@@ -20,4 +20,12 @@ module ApplicationHelper
     options['class'] = 'ui-btn-right'
     toolbar_button(text, path, options)
   end
+
+  def footer_nav_item(label, path)
+    if active_tab == label
+      link_to label, path, 'class' => 'ui-btn-active'
+    else
+      link_to label, path
+    end
+  end
 end

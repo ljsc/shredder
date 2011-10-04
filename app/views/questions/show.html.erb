@@ -1,3 +1,5 @@
+<% active_tab 'Questions' %>
+
 <div data-role="header">
   <%= toolbar_button 'Back', questions_path, :icon => 'arrow-l', :direction => 'reverse' %>
   <h1>Question</h1>
@@ -10,25 +12,14 @@
 <% end %>
 
 <div data-role="content">
-  <p>
-    <b>Title:</b>
-    <%= @question.title %>
+  <h2><%= @question.title %></h2>
+  <p><%= @question.body %></p>
+  
+  <p class="question-attribution">
+    &mdash; <em><%= @question.author %>, <%= distance_of_time_in_words @question.created_at, Time.now %> ago.</em>
   </p>
   
-  <p>
-    <b>Body:</b>
-    <%= @question.body %>
-  </p>
-  
-  <p>
-    <b>Author:</b>
-    <%= @question.author %>
-  </p>
-  
-  <p>
-    <b>Catagory:</b>
-    <%= @question.catagory %>
-  </p>
+  <p class="question-catagory">Catagory: <span class="label"><%= @question.catagory %></p>
 </div>
 
 

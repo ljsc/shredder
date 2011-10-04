@@ -6,7 +6,6 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
 </head>
 <body>
 
@@ -16,12 +15,12 @@
 <div data-role="page">
 <% end %>
   <%= yield %>
-  <div data-role="footer" data-position="fixed">
+  <div data-role="footer" data-position="fixed" data-id="application-footer">
     <div data-role="navbar">
       <ul>
-        <li><%= link_to 'Questions', questions_path %></li>
-        <li><%= link_to 'Your Stuff', questions_path %></li>
-        <li><%= link_to 'Notifications', questions_path %></li>
+        <li><%= footer_nav_item 'Questions', questions_path %></li>
+        <li><%= link_to 'Your Stuff', '#a' %></li>
+        <li><%= link_to 'Notifications', '#b' %></li>
       </ul>
     </div>
   </div>
