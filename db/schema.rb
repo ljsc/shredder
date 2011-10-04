@@ -11,15 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111001185533) do
+ActiveRecord::Schema.define(:version => 20111004145118) do
 
   create_table "questions", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.integer  "author_id"
     t.string   "catagory"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "author"
   end
+
+  add_index "questions", ["author"], :name => "index_questions_on_author"
 
 end
