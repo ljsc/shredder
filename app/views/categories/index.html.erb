@@ -1,0 +1,24 @@
+<% active_tab 'Categories' %>
+
+<div data-role="header" data-position="inline">
+  <h1>Categories</h1>
+  <%= toolbar_right_button 'Add', new_question_path, :iconpos => 'right', :icon => 'plus' %>
+</div>
+
+<% if notice %>
+  <div id="notice" class="ui-body ui-body-e"><%= notice %></div>
+<% end %>
+
+<div data-role="content">
+  <ul data-role="listview">
+  <% @categories.each do |category| %>
+    <li> 
+      <%= table_view_link category_path(category) do %>
+        <h2><%=category %></h2>
+        
+      <% end %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
