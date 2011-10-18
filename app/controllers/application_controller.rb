@@ -28,5 +28,5 @@ protected
     @active_tab
   end
 
-  helper_method :static_url, :active_tab
+  helper_method :static_url, :active_tab, :current_user
 end

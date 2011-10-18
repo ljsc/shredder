@@ -1,0 +1,13 @@
+<% active_tab 'Logout' %>
+
+<div data-role="header">
+  <h1>Logout</h1>
+</div>
+
+<div data-role="content">
+  <h2>Logout</h2>
+  <p>You are currently logged in as <%= current_user %>. Hit the button below to
+  logout of the system.</p>
+
+  <%= button_to 'Logout', destroy_session_path, :method => :delete, 'data-role' => 'button' %>
+</div>

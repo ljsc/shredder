@@ -9,4 +9,12 @@ class SessionController < ApplicationController
     flash.notice = "Welcome to Shredder, #{current_user}!"
     redirect_to questions_path
   end
+
+  def logout
+  end
+
+  def destroy
+    reset_session
+    redirect_to login_path, :message => 'Logged out'
+  end
 end

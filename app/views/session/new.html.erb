@@ -5,10 +5,17 @@
 <div data-role="content">
   <h1>Logging in</h1>
 
-  <p>This application requires you to log in using a twitter account.
-  Clicking the button below will transfer you to the Twitter page.
-  It will ask you if you'd like to authorized this application.
-  Select yes and you will be redirected back to the appliction.</p>
+  <p>This application requires you to log in using a Twitter account.  Clicking
+  the button below will transfer you to a Twitter page, which will ask you if
+  you'd like to authorize this application.  Select yes and you will be
+  redirected back to the appliction.</p>
 
   <%= link_to 'Login', '/auth/twitter', 'data-role' => 'button', 'rel' => 'external' %>
+
+  <p><strong>Note:</strong>Once you have authorized this application, when you
+push the login button, you'll automatically be logged in without asking for
+confirmation. If you'd like to log in with a different account, you'll have to
+log out of <a href="http://twitter.com/logout" rel="external">twitter first</a>,
+then come back to this app.</p>
+
 </div>
