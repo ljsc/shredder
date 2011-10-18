@@ -3,7 +3,12 @@
 </div>
 
 <div data-role="content">
-  <h1>Logining in</h1>
-  <p>This application requires you to log in using your GWU email account. Clicking the button below will transfer you to the Google Apps page for the university. It will ask you if you'd like to authorized this application. Select yes and you will be redirected back to the appliction.</p>
-  <%= link_to 'Login', '/auth/gwemail', 'data-role' => 'button', 'rel' => 'external' %>
+  <h1>Logging in</h1>
+
+  <p>This application requires you to log in using a twitter account.
+  Clicking the button below will transfer you to the Twitter page.
+  It will ask you if you'd like to authorized this application.
+  Select yes and you will be redirected back to the appliction.</p>
+
+  <%= link_to 'Login', '/auth/twitter', 'data-role' => 'button', 'rel' => 'external' %>
 </div>

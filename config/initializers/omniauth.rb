@@ -1,5 +1,5 @@
 require 'openid/store/filesystem'
 
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :google_apps, OpenID::Store::Filesystem.new('./tmp'), :name => 'gwemail',:domain => 'email.gwu.edu'
+  provider :twitter, 'xJSWv3kP43uf9Wa5JRmnaw', 'L620grlacPruJk7TYmgSB2LXnYukwVJo1wZlyaAc'
 end

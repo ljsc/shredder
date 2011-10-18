@@ -5,7 +5,7 @@ Shredder::Application.routes.draw do
   resources :categories, :only => [:index,:show]
 
   match '/login' => 'session#new', :as => 'login'
-  match '/auth/gwemail/callback' => 'session#create'
+  match '/auth/twitter/callback' => 'session#create'
 
   root :to => 'questions#index'
 end
