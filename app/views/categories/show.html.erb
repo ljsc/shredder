@@ -1,8 +1,8 @@
 <% active_tab 'Categories' %>
 
 <div data-role="header" data-position="inline">
+  <%= toolbar_button 'Back', categories_path, :icon => 'arrow-l', :direction => 'reverse' %>
   <h1>Questions</h1>
-  <%= toolbar_right_button 'Add', new_question_path, :iconpos => 'right', :icon => 'plus' %>
 </div>
 
 <% if notice %>
