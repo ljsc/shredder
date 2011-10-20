@@ -20,6 +20,8 @@
   </p>
   
   <p class="question-catagory">Catagory: <span class="label"><%= @question.catagory %></p>
+
+  <%= link_to 'Add An Answer', new_answer_path(:question_id => @question.id), 'data-role' => 'button' %>
 </div>
 
 

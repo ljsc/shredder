@@ -3,6 +3,7 @@ Shredder::Application.routes.draw do
 
   resources :questions
   resources :categories, :only => [:index,:show]
+  resources :answers
 
   match '/login' => 'session#new', :as => 'login'
   match '/logout' => 'session#logout', :as => 'logout'
